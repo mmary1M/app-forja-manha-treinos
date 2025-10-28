@@ -1,54 +1,123 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./Images/caillou.jpg" type="image/x-icon">
 </head>
+
 <body>
     <nav>
         <div class="wrap-img">
-        <img class="logo"  src="Images/caillou.png"  alt="Logo">
+            <img class="logo" src="./Images/images.png" alt="Logo">
         </div>
         <div class="wrap-links">
-        <a href="#s1">Section 01</a>
-        <a href="#s2">Section 02</a>
-        <a href="#s3">Section 03</a>
-        <a href="#s4">Section 04</a>
+            <a href="#s1">Home</a>
+            <a href="#s2">Card</a>
+            <a href="#s3">Video</a>
+            <a href="#s4">Curiosidade</a>
         </div>
     </nav>
     <main>
 
         <section id="s1">
-            <div class="left">  
+            <div class="left">
                 <div class="wrap-banner">
                     <img src="./Images/banner.jpg" alt="banner">
                 </div>
             </div>
             <div class="right">
                 <h1>caillou</h1>
-                <p> O Caillou é um desenho animado infantil canadense que acompanha o garoto de 4 anos Caillou em suas aventuras do dia a dia, 
-                    que o ajudam a aprender sobre o mundo ao seu redor. 
-                    Ele é careca por escolha estética, mas essa característica inspirou várias teorias de fãs, como a de que ele teria câncer.
-                    A série, baseada em livros, é conhecida por sua abordagem sobre temas comuns da infância, como medo, amizade e o desenvolvimento de empatia,
+                <p> O Caillou é um desenho animado infantil canadense que acompanha o garoto de 4 anos Caillou em suas
+                    aventuras do dia a dia,
+                    que o ajudam a aprender sobre o mundo ao seu redor.
+                    Ele é careca por escolha estética, mas essa característica inspirou várias teorias de fãs, como a de
+                    que ele teria câncer.
+                    A série, baseada em livros, é conhecida por sua abordagem sobre temas comuns da infância, como medo,
+                    amizade e o desenvolvimento de empatia,
                     embora também seja controversa por algumas representações de mau comportamento do personagem.</p>
-
             </div>
         </section>
-        
         <section id="s2">
-           <h2>2</h2>     
+            <h2>Cards dos personagens </h2>
+            <div class="wrap-cards">
+                <div class="card">
+                    <img src="Images/caillllou.png" alt="caillou">
+                    <h3>Caillou</h3>
+                    <p> se baseia em um garoto de 4 anos que vive aventuras e explora o mundo com sua família e amigos,
+                        aprendendo sobre emoções, comportamento social e superação de desafios típicos da infância</p>
+                </div>
+
+                <div class="card">
+                    <img src="Images/irma.png" alt="rossi">
+                    <h3>Rossi</h3>
+                    <p>Rosie é a irmã mais nova do Caillou. Ela é curiosa, carinhosa e gosta de imitar o irmão. Apesar
+                        das briguinhas, os dois se dão bem e aprendem juntos. Rosie tem cabelo ruivo, usa vestidos
+                        coloridos e representa o jeito doce e curioso das crianças pequenas.</p>
+                </div>
+
+                <div class="card">
+                    <img src="Images/mae.webp" alt="Doris">
+                    <h3>Doris</h3>
+                    <p>Doris é a mãe carinhosa e paciente do Caillou, que o ajuda a aprender e crescer com amor e
+                        cuidado.</p>
+                </div>
+
+                <div class="card">
+                    <img src="Images/pai.jpg" alt="Boris">
+                    <h3>Boris</h3>
+                    <p>Boris é o pai do Caillou. Ele é gentil, divertido e gosta de passar tempo com a família. Sempre
+                        ajuda
+                        Caillou a aprender coisas novas e a resolver problemas com calma.</p>
+                </div>
+                <div class="card">
+                    <img src="Images/47_big.webp" alt="Gilbert">
+                    <h3>Gilbert</h3>
+                    <p>Gilbert é o gatinho de estimação do Caillou. Ele é brincalhão, curioso e adora tirar sonecas.
+                        Gilbert
+                        está sempre por perto, acompanhando Caillou em suas aventuras e trazendo alegria à família.</p>
+                </div>
+            </div>
+
         </section>
+
 
         <section id="s3">
-           <h2>3</h2> 
+            <div class="wrap-video">
+                <iframe width="560" height="315"
+                    src="https://www.youtube.com/embed/YhluLzzySrk?si=_QfDSC8WUEjRogwc&amp;start=7"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </section>
 
-        <section id="s4">
-            <h2>4</h2>
-        </section>
+ <section id="s4">
+    <h4>Curiosidades</h4>
+    <div class="curiosidade">
+        <img src="Images/caillou.webp" alt="Caillou">
+        <p id="texto">Caillou é um personagem infantil muito querido, criado no Canadá...</p>
+        <button onclick="mostrarCuriosidade()">Mostrar outra curiosidade</button>
+    </div>
+</section>
 
-    </main>
-</body>
-</html>
+<script>
+    const curiosidades = [
+        "O nome 'Caillou' significa 'pedrinha' em francês.",
+        "Caillou começou como um bebê nos livros, depois virou uma criança de 4 anos no desenho.",
+        "O desenho ajuda crianças a lidar com emoções e situações do dia a dia.",
+        "Caillou é careca porque assim era mais fácil mostrar suas expressões faciais."
+    ];
+
+    let indice = 0;
+    function mostrarCuriosidade() {
+        indice = (indice + 1) % curiosidades.length;
+        document.getElementById("texto").textContent = curiosidades[indice];
+    }
+
+</script>
+<audio id="musicaCaillou" src="Audio/tema-caillou.mp3"></audio>
+<button onclick="document.getElementById('musicaCaillou').play()">▶️ Tocar música</button>
